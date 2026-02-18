@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Розклад Уроків</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 { color: #2c3e50; margin-bottom: 20px; }
+        .schedule-container {
+            width: 100%;
+            max-width: 800px;
+            display: grid;
+            gap: 20px;
+        }
+        .day-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .day-card:hover { transform: translateY(-5px); }
+        .day-header {
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .lessons-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .lesson-item {
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        .lesson-item:last-child { border-bottom: none; }
+        .lesson-number {
+            background: #ecf0f1;
+            color: #7f8c8d;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        /* Кольори для різних днів */
+        .day-card:nth-child(1) .day-header { background: #e74c3c; } /* Пн */
+        .day-card:nth-child(2) .day-header { background: #f39c12; } /* Вт */
+        .day-card:nth-child(3) .day-header { background: #2ecc71; } /* Ср */
+        .day-card:nth-child(4) .day-header { background: #9b59b6; } /* Чт */
+        .day-card:nth-child(5) .day-header { background: #1abc9c; } /* Пт */
+    </style>
+</head>
+<body>
+
+    <h1>📅 Розклад уроків</h1>
+
+    <div class="schedule-container">
+        <div class="day-card">
+            <div class="day-header">Понеділок</div>
+            <ul class="lessons-list">
+                <li class="lesson-item"><span class="lesson-number">1</span> Алгебра</li>
+                <li class="lesson-item"><span class="lesson-number">2</span> Укр. мова</li>
+                <li class="lesson-item"><span class="lesson-number">3</span> Хімія</li>
+                <li class="lesson-item"><span class="lesson-number">4</span> Історія України</li>
+                <li class="lesson-item"><span class="lesson-number">5</span> Технології</li>
+                <li class="lesson-item"><span class="lesson-number">6</span> Мистецтво</li>
+                <li class="lesson-item"><span class="lesson-number">7</span> Інформатика</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">Вівторок</div>
+            <ul class="lessons-list">
+                <li class="lesson-item"><span class="lesson-number">1</span> Геометрія</li>
+                <li class="lesson-item"><span class="lesson-number">2</span> Англ. мова</li>
+                <li class="lesson-item"><span class="lesson-number">3</span> Укр. мова</li>
+                <li class="lesson-item"><span class="lesson-number">4</span> Географія</li>
+                <li class="lesson-item"><span class="lesson-number">5</span> Фізкультура</li>
+                <li class="lesson-item"><span class="lesson-number">6</span> ЗБД</li>
+                <li class="lesson-item"><span class="lesson-number">7</span> Фізика</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">Середа</div>
+            <ul class="lessons-list">
+                <li class="lesson-item"><span class="lesson-number">1</span> Англ. мова</li>
+                <li class="lesson-item"><span class="lesson-number">2</span> Укр. мова</li>
+                <li class="lesson-item"><span class="lesson-number">3</span> Підприємництво</li>
+                <li class="lesson-item"><span class="lesson-number">4</span> Біологія</li>
+                <li class="lesson-item"><span class="lesson-number">5</span> Алгебра</li>
+                <li class="lesson-item"><span class="lesson-number">6</span> Хімія</li>
+                <li class="lesson-item"><span class="lesson-number">7</span> Література</li>
+                <li class="lesson-item"><span class="lesson-number">8</span> Інформатика</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">Четвер</div>
+            <ul class="lessons-list">
+                <li class="lesson-item"><span class="lesson-number">1</span> Географія</li>
+                <li class="lesson-item"><span class="lesson-number">2</span> Геометрія</li>
+                <li class="lesson-item"><span class="lesson-number">3</span> Укр. мова</li>
+                <li class="lesson-item"><span class="lesson-number">4</span> Всесв. історія</li>
+                <li class="lesson-item"><span class="lesson-number">5</span> Англ. мова</li>
+                <li class="lesson-item"><span class="lesson-number">6</span> Фізкультура</li>
+                <li class="lesson-item"><span class="lesson-number">7</span> Література</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">П'ятниця</div>
+            <ul class="lessons-list">
+                <li class="lesson-item"><span class="lesson-number">1</span> Біологія</li>
+                <li class="lesson-item"><span class="lesson-number">2</span> Фізкультура</li>
+                <li class="lesson-item"><span class="lesson-number">3</span> Література</li>
+                <li class="lesson-item"><span class="lesson-number">4</span> Фізика</li>
+                <li class="lesson-item"><span class="lesson-number">5</span> Англ. мова</li>
+                <li class="lesson-item"><span class="lesson-number">6</span> Алгебра</li>
+                <li class="lesson-item"><span class="lesson-number">7</span> Гром. освіта</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

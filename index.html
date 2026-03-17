@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Мій розклад уроків</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -46,6 +47,16 @@
       font-weight: bold;
     }
 
+    /* 🔥 ВИДІЛЕННЯ ТЕКСТУ */
+    .highlight {
+      background: yellow;
+      color: black;
+      padding: 4px 8px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
     .card {
       background: rgba(255, 255, 255, 0.88);
       border-radius: 24px;
@@ -67,21 +78,21 @@
       width: 100%;
       border-collapse: collapse;
       min-width: 900px;
-      overflow: hidden;
       border-radius: 18px;
     }
 
+    /* ✅ ВИРІВНЮВАННЯ ПО ЦЕНТРУ */
     th, td {
       border: 2px solid #cbd5e1;
       padding: 14px 10px;
       text-align: center;
+      vertical-align: middle;
       font-size: 16px;
     }
 
     th {
       color: white;
       font-size: 17px;
-      letter-spacing: 0.3px;
     }
 
     .schedule th {
@@ -96,38 +107,13 @@
       font-weight: bold;
       background: #eef2ff;
       color: #3730a3;
-      width: 90px;
     }
 
-    .monday {
-      background: #fee2e2;
-      color: #b91c1c;
-      font-weight: bold;
-    }
-
-    .tuesday {
-      background: #dbeafe;
-      color: #1d4ed8;
-      font-weight: bold;
-    }
-
-    .wednesday {
-      background: #dcfce7;
-      color: #15803d;
-      font-weight: bold;
-    }
-
-    .thursday {
-      background: #fef3c7;
-      color: #b45309;
-      font-weight: bold;
-    }
-
-    .friday {
-      background: #f3e8ff;
-      color: #7e22ce;
-      font-weight: bold;
-    }
+    .monday { background: #fee2e2; }
+    .tuesday { background: #dbeafe; }
+    .wednesday { background: #dcfce7; }
+    .thursday { background: #fef3c7; }
+    .friday { background: #f3e8ff; }
 
     .empty {
       background: #f8fafc;
@@ -155,35 +141,37 @@
       font-weight: bold;
     }
 
-    @media (max-width: 900px) {
-      .hero h1 {
-        font-size: 30px;
-      }
+    img {
+      display: block;
+      margin: 20px auto;
+      width: 120px;
+    }
 
-      .hero p {
-        font-size: 16px;
-      }
-
-      .card h2 {
-        font-size: 23px;
-      }
-
-      th, td {
-        font-size: 14px;
-        padding: 10px 8px;
-      }
+    iframe {
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
     }
   </style>
 </head>
+
 <body>
   <div class="wrapper">
+
     <div class="hero">
       <h1>Мій розклад уроків</h1>
       <p>ІІ семестр 2025/2026 н.р.</p>
+
+      <!-- 🔥 ВИДІЛЕНИЙ ТЕКСТ -->
+      <div class="highlight">Це мій особистий шкільний розклад</div>
+
+      <!-- 🖼️ КАРТИНКА -->
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
     </div>
 
     <div class="card">
       <h2>Розклад уроків на тиждень</h2>
+
       <table class="schedule">
         <tr>
           <th>№ уроку</th>
@@ -193,146 +181,40 @@
           <th>Четвер</th>
           <th>П’ятниця</th>
         </tr>
-        <tr>
-          <td class="lesson-num">1</td>
-          <td class="monday">Алгебра</td>
-          <td class="tuesday">Геометрія</td>
-          <td class="wednesday">Англ. мова</td>
-          <td class="thursday">Географія</td>
-          <td class="friday">Біологія</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">2</td>
-          <td class="monday">Укр. мова</td>
-          <td class="tuesday">Англ. мова</td>
-          <td class="wednesday">Укр. мова</td>
-          <td class="thursday">Геометрія</td>
-          <td class="friday">Фізкультура</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">3</td>
-          <td class="monday">Хімія</td>
-          <td class="tuesday">Укр. мова</td>
-          <td class="wednesday">Підприємництво</td>
-          <td class="thursday">Укр. мова</td>
-          <td class="friday">Література</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">4</td>
-          <td class="monday">Історія України</td>
-          <td class="tuesday">Географія</td>
-          <td class="wednesday">Біологія</td>
-          <td class="thursday">Всесв. історія</td>
-          <td class="friday">Фізика</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">5</td>
-          <td class="monday">Технології</td>
-          <td class="tuesday">Фізкультура</td>
-          <td class="wednesday">Алгебра</td>
-          <td class="thursday">Англ. мова</td>
-          <td class="friday">Англ. мова</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">6</td>
-          <td class="monday">Мистецтво</td>
-          <td class="tuesday">ЗБД</td>
-          <td class="wednesday">Хімія</td>
-          <td class="thursday">Фізкультура</td>
-          <td class="friday">Алгебра</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">7</td>
-          <td class="monday">Інформатика</td>
-          <td class="tuesday">Фізика</td>
-          <td class="wednesday">Література</td>
-          <td class="thursday">Література</td>
-          <td class="friday">Гром. освіта</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">8</td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-          <td class="wednesday">Інформатика</td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">9</td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-          <td class="empty">-</td>
-        </tr>
+
+        <tr><td class="lesson-num">1</td><td class="monday">Алгебра</td><td class="tuesday">Геометрія</td><td class="wednesday">Англ. мова</td><td class="thursday">Географія</td><td class="friday">Біологія</td></tr>
+        <tr><td class="lesson-num">2</td><td class="monday">Укр. мова</td><td class="tuesday">Англ. мова</td><td class="wednesday">Укр. мова</td><td class="thursday">Геометрія</td><td class="friday">Фізкультура</td></tr>
+        <tr><td class="lesson-num">3</td><td class="monday">Хімія</td><td class="tuesday">Укр. мова</td><td class="wednesday">Підприємництво</td><td class="thursday">Укр. мова</td><td class="friday">Література</td></tr>
+        <tr><td class="lesson-num">4</td><td class="monday">Історія України</td><td class="tuesday">Географія</td><td class="wednesday">Біологія</td><td class="thursday">Всесв. історія</td><td class="friday">Фізика</td></tr>
       </table>
     </div>
 
     <div class="card">
       <h2>Розклад дзвінків</h2>
+
       <table class="bells">
         <tr>
           <th>№ уроку</th>
-          <th>Початок уроків</th>
-          <th>Закінчення уроків</th>
+          <th>Початок</th>
+          <th>Кінець</th>
           <th>Перерва</th>
         </tr>
-        <tr>
-          <td class="lesson-num">1</td>
-          <td class="time-cell">08:00</td>
-          <td class="time-cell">08:45</td>
-          <td class="break">20 хв.</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">2</td>
-          <td class="time-cell">09:05</td>
-          <td class="time-cell">09:50</td>
-          <td class="break">10 хв.</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">3</td>
-          <td class="time-cell">10:00</td>
-          <td class="time-cell">10:45</td>
-          <td class="break">10 хв.</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">4</td>
-          <td class="time-cell">10:55</td>
-          <td class="time-cell">11:40</td>
-          <td class="break">20 хв.</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">5</td>
-          <td class="time-cell">12:00</td>
-          <td class="time-cell">12:45</td>
-          <td class="break">20 хв.</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">6</td>
-          <td class="time-cell">13:05</td>
-          <td class="time-cell">13:50</td>
-          <td class="break">10 хв.</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">7</td>
-          <td class="time-cell">14:00</td>
-          <td class="time-cell">14:45</td>
-          <td class="break">10 хв.</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">8</td>
-          <td class="time-cell">14:55</td>
-          <td class="time-cell">15:40</td>
-          <td class="break">10 хв.</td>
-        </tr>
-        <tr>
-          <td class="lesson-num">9</td>
-          <td class="time-cell">15:50</td>
-          <td class="time-cell">16:35</td>
-          <td class="empty">-</td>
-        </tr>
+
+        <tr><td class="lesson-num">1</td><td class="time-cell">08:00</td><td class="time-cell">08:45</td><td class="break">20 хв</td></tr>
+        <tr><td class="lesson-num">2</td><td class="time-cell">09:05</td><td class="time-cell">09:50</td><td class="break">10 хв</td></tr>
       </table>
     </div>
 
+    <!-- 🎬 ВІДЕО -->
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      allowfullscreen>
+    </iframe>
 
+    <div class="footer">
+      Готовий сайт розкладу для GitHub Pages
+    </div>
+
+  </div>
+</body>
 </html>
